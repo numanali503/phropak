@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>People's Human Rights Organization - Under Maintenance</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        overflow-x: hidden;
+      }
+
+      .video-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: -1;
+      }
+
+      .video-container:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.9) 0%,
+          rgba(255, 255, 255, 0.85) 100%
+        );
+        z-index: 1;
+      }
+
+      .video-container video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        transform: translateX(-50%) translateY(-50%);
+        object-fit: cover;
+      }
+
+      .logo-pulse {
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      .underline-green {
+        position: relative;
+        display: inline-block;
+      }
+
+      .underline-green::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 4px;
+        background-color: #00a86b;
+        border-radius: 2px;
+      }
+
+      .social-icon {
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+
+      .social-icon:hover {
+        transform: translateY(-5px);
+      }
+
+      .content-wrapper {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+
+      .green-accent {
+        border-left: 4px solid #00a86b;
+      }
+
+      .btn {
+        transition: all 0.3s ease;
+      }
+
+      .btn-primary {
+        background-color: #00a86b;
+        color: white;
+      }
+
+      .btn-primary:hover {
+        background-color: #008f5b;
+      }
+
+      .btn-outline {
+        background-color: transparent;
+        color: #00a86b;
+        border: 1px solid #00a86b;
+      }
+
+      .btn-outline:hover {
+        background-color: rgba(0, 168, 107, 0.1);
+      }
+
+      .org-name {
+        color: #00a86b;
+        font-weight: 600;
+        margin-top: 0.5rem;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen">
+    <!-- Background Video -->
+    <div class="video-container">
+      <video autoplay muted loop playsinline>
+        <source src="./assets/video.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    <div class="min-h-screen flex flex-col justify-between py-6 px-4">
+      <header class="container mx-auto">
+        <div class="flex flex-col items-center justify-center">
+          <img
+            src="./assets/logo.png"
+            alt="PHRO Logo"
+            class="logo-pulse h-24 md:h-28"
+          />
+          <p class="org-name text-lg md:text-xl mt-2">
+            People's Human Rights Organization
+          </p>
+        </div>
+      </header>
+
+      <main
+        class="container mx-auto flex-grow flex flex-col items-center justify-center py-8"
+      >
+        <div class="content-wrapper max-w-2xl w-full p-8 text-center">
+          <h1 class="text-3xl md:text-4xl font-bold text-green-600 mb-6">
+            We're Improving Our Site
+          </h1>
+
+          <h2 class="text-xl md:text-2xl font-semibold text-gray-700 mb-8">
+            People's Human Rights Organization
+          </h2>
+
+          <div
+            class="green-accent pl-4 py-3 bg-green-50 bg-opacity-70 rounded-md mb-8 text-left"
+          >
+            <p class="text-gray-700">
+              We're currently enhancing our digital presence to better serve our
+              mission of protecting and advancing human rights worldwide. We'll
+              be back soon with a more powerful platform.
+            </p>
+          </div>
+
+          <div class="mb-8">
+            <h3 class="text-lg font-medium text-green-600 mb-5">
+              Connect With Us
+            </h3>
+            <div class="flex justify-center space-x-4">
+              <a
+                href="https://www.facebook.com/share/1A5QLu62cd/?mibextid=wwXIfr"
+                class="social-icon bg-blue-100 hover:bg-blue-200 text-blue-600"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="#"
+                class="social-icon bg-blue-50 hover:bg-blue-100 text-blue-400"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="#"
+                class="social-icon bg-pink-50 hover:bg-pink-100 text-pink-600"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="#"
+                class="social-icon bg-red-50 hover:bg-red-100 text-red-600"
+              >
+                <i class="fab fa-youtube"></i>
+              </a>
+              <a
+                href="#"
+                class="social-icon bg-blue-50 hover:bg-blue-100 text-blue-700"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4"
+          >
+            <a
+              href="mailto:phropak@gmail.com,contact@phropak.org.pk"
+              class="btn btn-primary font-medium py-2 px-6 rounded-full flex items-center justify-center w-full sm:w-auto"
+            >
+              <i class="far fa-envelope mr-2"></i> Contact Us
+            </a>
+            <a
+              href="#"
+              class="btn btn-outline font-medium py-2 px-6 rounded-full flex items-center justify-center w-full sm:w-auto"
+            >
+              <i class="fas fa-phone-alt mr-2"></i> Call Us
+            </a>
+          </div>
+        </div>
+      </main>
+
+      <footer class="container mx-auto text-center text-gray-600">
+        <p>© 2025 People's Human Rights Organization. All rights reserved.</p>
+        <div class="mt-2 text-sm">
+          <a href="#" class="text-green-600 hover:text-green-800 mx-2"
+            >Privacy Policy</a
+          >
+          <a href="#" class="text-green-600 hover:text-green-800 mx-2"
+            >Terms of Service</a
+          >
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
